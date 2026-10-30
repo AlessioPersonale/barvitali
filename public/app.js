@@ -273,17 +273,29 @@
     if (e.key === 'ArrowLeft') show(cur - 1, true);
   });
 
-  fetch('/api/reviews').then(function (r) { return r.json(); }).then(function (d) {
+  // Con il server Node le recensioni arrivano da /api/reviews (e si aggiornano dal vivo);
+  // senza server (sito statico) si legge il file fisso /reviews.json.
+  function load(url) {
+    return fetch(url).then(function (r) {
+      if (!r.ok) throw new Error(r.status);
+      return r.json();
+    });
+  }
+  function start(d, live) {
     d.reviews.forEach(function (r) { add(r, false); });
     setStats(d.stats);
     show(0);
     restart();
-  });
-  var es = new EventSource('/api/events');
-  es.addEventListener('review', function (e) {
-    var d = JSON.parse(e.data);
-    add(d.review, true);
-    setStats(d.stats);
-  });
-  es.addEventListener('stats', function (e) { setStats(JSON.parse(e.data).stats); });
+    if (!live || !window.EventSource) return;
+    var es = new EventSource('/api/events');
+    es.addEventListener('review', function (e) {
+      var x = JSON.parse(e.data);
+      add(x.review, true);
+      setStats(x.stats);
+    });
+    es.addEventListener('stats', function (e) { setStats(JSON.parse(e.data).stats); });
+  }
+  load('/api/reviews').then(function (d) { start(d, true); }, function () {
+    return load('/reviews.json').then(function (d) { start(d, false); });
+  }).catch(function () {});
 })();

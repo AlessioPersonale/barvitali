@@ -1,0 +1,50 @@
+{
+  "stats": {
+    "count": 504,
+    "avg": 4.5
+  },
+  "reviews": [
+    {
+      "id": "snap0",
+      "name": "Bello Maestro",
+      "rating": 5,
+      "text": "Promosso! Bella location che dà sulla piazza, rione di Lecco sembra di stare in un paese. Buone birre, prezzi normali e stuzzichini ad accompagnare."
+    },
+    {
+      "id": "snap1",
+      "name": "MARIA ROSA BENAGLIA",
+      "rating": 5,
+      "text": "Abbiamo pranzato in questo posto fuori in piazzetta ,panini deliziosi, vino doc, c'è di tutto un po' . Prezzi abbordabili e personale veloce. I due titolari molto preparati sui vini e cibo. Da provare dopo una bella gita sul Resegone."
+    },
+    {
+      "id": "snap2",
+      "name": "Chiara",
+      "rating": 5,
+      "text": "Il mio bar preferito a Lecco ed è anche il primo in cui sono stata per puro caso quando ci sono venuta la prima volta. Birrette buone, ottima compagnia e piadine super!"
+    },
+    {
+      "id": "snap3",
+      "name": "Vivien 84",
+      "rating": 5,
+      "text": "Fantastico bar.. Panini ottimi, così come il vino e i taglieri.. Ci si sente sempre coccolati perché oltre a prezzi contenuti ed onesti, durante l'aperitivo ti portano sempre qualcosa di buono da mangiare. Ci si sente come a casa!!"
+    },
+    {
+      "id": "snap4",
+      "name": "Patrizia Alderighi",
+      "rating": 5,
+      "text": "È uno dei pochissimi locali dove puoi stare tranquillo perché ha un insonorizzazione eccezionale e puoi tranquillamente parlare e sentire chi è con te. E ha un grande varietà di cibo per tutti i gusti E il personale super gentile e disponibile ad ogni richiesta"
+    },
+    {
+      "id": "snap5",
+      "name": "Guidi Alberto",
+      "rating": 4,
+      "text": "Ambiente sobrio, servizio cortese e veloce. Pranzo lí una volta a settimana e sempre c'é una buona scelta di primi del giorno, oltre ai panini, piadine e insalatone come da menù. Ottimo l esterno in piazzetta ora che arriva l estate"
+    },
+    {
+      "id": "snap6",
+      "name": "Edmund Dantes",
+      "rating": 5,
+      "text": "Sono stato qualche tempo fa per visitare Lecco e Como con un' amica stretta e devo dire che questo bar \" vecchia scuola\" ti fa sentire a casa. Oltre alla qualità del cibo e ai prezzi contenuti, il servizio è veramente esaustivo e idem per i dipendenti. Tutti bravi lavoratori!"
+    }
+  ]
+}
