@@ -142,7 +142,8 @@ server.on('error', err => {
 });
 
 server.listen(PORT, async () => {
-  const site = process.env.SITE_URL || `http://${lanIp()}:${PORT}`;
+  // Online (Render imposta RENDER) il QR punta al sito vero; in locale all'indirizzo della rete di casa.
+  const site = process.env.SITE_URL || (process.env.RENDER ? 'https://www.barvitalilecco.it' : `http://${lanIp()}:${PORT}`);
   const svg = await QRCode.toString(`${site}/lingua.html`, { type: 'svg', margin: 1, color: { dark: '#14110F', light: '#FFF6E5' } });
   fs.writeFileSync(path.join(PUBLIC, 'qr.svg'), svg);
   console.log(`Bar Vitali: http://localhost:${PORT}`);
