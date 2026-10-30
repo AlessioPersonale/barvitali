@@ -1,0 +1,20 @@
+{
+  "name": "bar-vitali",
+  "version": "1.0.0",
+  "description": "Sito di Bar Vitali (Acquate, Lecco): home, menu in 4 lingue, recensioni Google",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "qrcode": "^1.5.4"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "private": true
+}
